@@ -1,0 +1,10 @@
+num1 = 10
+num2 = 20
+
+for i in range(num1,num2+1):
+    if ( num1 < num2 ) and (num1 + num2) % 3 == 0:
+        if (len(str(num1)) == 2 and len(str(num2)) == 2) and (i % 5 == 0):
+            print(i)
+
+else:
+    print(-1)
