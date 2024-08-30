@@ -1,10 +1,34 @@
-num1 = 10
-num2 = 20
+#Write a python program which finds the maximum number from num1 to num2 (num2 inclusive) based on the following rules.
+ #1. Always num1 should be less than num2
+  #2. Consider each number from num1 to num2 (num2 inclusive). Populate the number into a list, if the below conditions are satisfied
+      a. Sum of the digits of the number is a multiple of 3
+      b. Number has only two digits
+      c. Number is a multiple of 5
+#3. Display the maximum element from the list
+#In case of any invalid data or if the list is empty, display -1.
 
-for i in range(num1,num2+1):
-    if ( num1 < num2 ) and (num1 + num2) % 3 == 0:
-        if (len(str(num1)) == 2 and len(str(num2)) == 2) and (i % 5 == 0):
-            print(i)
+#lex_auth_012693813706604544157
 
-else:
-    print(-1)
+def find_max(num1, num2):
+    # Write your logic here
+    list1 = []
+    if num1 < num2:
+        for i in range(num1,num2+1):
+            if (len(str(i)) == 2) and (i % 5 == 0):
+                if ((i % 10) + (i // 10)) % 3 == 0:
+                    list1.append(i) 
+            
+        print(list1)
+        
+    if len(list1) == 0:
+        max_num = -1     
+    
+    else:
+        max_num = list1[-1]
+
+    return max_num
+    
+
+#Provide different values for num1 and num2 and test your program.
+max_num=find_max(24,29)
+print(max_num)
