@@ -4,7 +4,7 @@ def find_leap_years(given_year):
     list_of_leap_years = [given_year]
 #while loop to create 15 leap years as multiples of 4
     while i < 15:
-        if (given_year % 4 == 0) or (given_year % 100 == 0 and given_year % 400 == 0):  #Leap year condition
+        if (given_year % 4 == 0) or (given_year % 400 == 0):  #Leap year condition
             given_year += 4                                                             
             i += 1                                                                      #incrementing i
         list_of_leap_years.append(given_year)
