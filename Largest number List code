@@ -1,0 +1,39 @@
+# 1.With loop
+
+#lex_auth_01269441913243238467
+
+def create_largest_number(number_list):
+    str1 = ''
+    largest_number = 0
+    i = 0
+    #remove pass and write your logic here
+    while i <= (len(number_list)+1):
+        str1 += str(max(number_list))
+        number_list.pop(number_list.index(max(number_list)))
+        i += 1
+    largest_number = int(str1)
+    return largest_number
+ 
+number_list=[23,45,67]
+largest_number=create_largest_number(number_list)
+print(largest_number)
+----------------------------------------------------------------------------------------
+# 2. With functions
+#lex_auth_01269441913243238467
+
+def create_largest_number(number_list):
+
+    #remove pass and write your logic here
+    str1=''
+    largest_number = 0
+    number_list.sort()
+    number_list.reverse()
+    
+    for i in number_list:
+        str1 += str(i)
+    
+    largest_number = str1
+    return largest_number
+number_list=[23,45,67]
+largest_number=create_largest_number(number_list)
+print(largest_number)
