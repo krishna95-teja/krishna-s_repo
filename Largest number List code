@@ -30,10 +30,26 @@ def create_largest_number(number_list):
     number_list.reverse()
     
     for i in number_list:
-        str1 += str(i)
-    
+        str1 += str(i)    
     largest_number = str1
     return largest_number
+number_list=[23,45,67]
+largest_number=create_largest_number(number_list)
+print(largest_number)
+
+----------------------------------------------------------------------------------------------
+
+# 3. With For loop
+#lex_auth_01269441913243238467
+
+def create_largest_number(number_list):
+    #remove pass and write your logic here
+    result_string = ''
+    number_list.sort(reverse = True)
+    print(number_list)
+    for i in range(0, len(number_list)):
+        result_string = result_string + str(number_list.pop(0))
+    return int(result_string)
 number_list=[23,45,67]
 largest_number=create_largest_number(number_list)
 print(largest_number)
