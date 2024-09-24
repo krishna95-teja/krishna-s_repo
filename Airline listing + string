@@ -1,0 +1,25 @@
+#lex_auth_012693763253788672132
+
+def generate_ticket(airline,source,destination,no_of_passengers):
+    ticket_number_list=[]
+    #Write your logic here
+    number = 101
+    i = 1
+    if no_of_passengers > 5:
+        while i <= no_of_passengers:
+            a = airline + ":" + source[:3] + ":" + destination[:3] + ":" + str(number)
+            ticket_number_list.append(a)
+            number+=1
+            i+=1
+        return ticket_number_list[-5:]
+    elif no_of_passengers < 5:
+        while i <= no_of_passengers:
+            b = airline + ":" + source[:3] + ":"+ destination[:3] + ":" + str(number)
+            ticket_number_list.append(b)
+            number+=1
+            i+=1
+        return ticket_number_list
+    #Use the below return statement wherever applicable
+
+#Provide different values for airline,source,destination,no_of_passengers and test your program
+print(generate_ticket("AI","Bangalore","London",14))
