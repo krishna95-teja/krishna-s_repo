@@ -1,0 +1,132 @@
+Script 1:
+
+# Script to write factorial of a number
+import math
+number = int(input("Enter a number: "))
+Factorial = math.factorial(number)
+print(Factorial)
+
+-------
+
+# Script to write even odd
+num = int(input("Enter any number: "))
+if num % 2 == 0:
+  print("Number is an even one")
+else:
+  print("Number is odd")
+
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+
+Script 2:
+
+#Script for smallest number
+list1 = [123,234,324,112,-36]
+list1.sort()
+print("The smallest number is: ",list1[0])
+          OR
+list1 = [123,234,324,112,-36]
+smallest = list1[0]
+for i in list1:
+  if i < smallest:
+    smallest = i
+print("Largest number is: ",smallest)
+
+------
+
+#Script for largest number
+list1 = [123,234,324,112,-36]
+list1.sort()
+list1.reverse()
+print("The largest number is: ",list[0])
+             OR
+list1 = [123,234,324,112,-36]
+largest = list1[0]
+for i in list1:
+  if i > largest:
+    largest = i
+print("Largest number is: ",largest)
+
+-----
+
+#Script for sum of list
+list1 = [123,234,324,112,-36]
+sum = 0
+for n in range(0,len(list1)):
+  print(n)
+  sum += list1[n]
+print(sum)
+
+-----
+
+#Script for average of list
+list1 = [123,234,324,112,-36]
+sum = 0
+for n in range(0, len(list1)):
+  sum += list1[n]
+print(sum/len(list1))
+
+-----
+#Script for removing duplicates
+list1 = [123,234,324,112,-36,112]
+unique = []
+for i in list1:
+  if i not in unique:
+    unique.append(i)
+print(unique)
+
+
+-----
+
+Follow up scripts:
+
+list1 = [123,234,324,112,-36]
+negative_list = []
+list1.sort()
+print("Second largest number: ",list1[-2])
+print("Count of numbers: ",len(list1))
+for i in list1:
+  if i < 0:
+    negative_list.append(i)
+print(negative_list)
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+
+Script 3:
+
+#Script for word count
+word = input("Enter a word: ")
+print(word.count(" ")+1)
+
+-----
+
+#Script for character count with no spaces
+word = input("Enter a word: ")
+#print(word.replace(" ",""))
+print(len(word.replace(" ","")))
+
+-----
+
+#Script for reverse string
+word = input("Enter a word: ")
+print(word[::-1])
+
+
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+Script 6:
+
+import platform
+import os
+#print(dir(platform))
+#print(dir(os))
+print("Python version: ",platform.python_version())
+print("System info: ",platform.uname())
+print("Platform: ",platform.platform())
+print("OS version: ",os.name)
+print("Hostname: ",platform.node())
